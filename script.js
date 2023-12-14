@@ -2,22 +2,19 @@
 
 const logoButton = document.querySelector('.logoButton');
 
-a=255;
-b=255;
-c=255;
-while(a>65 && b>0 && c>175) {
-    
-    a-=3;
-    b-=5;
-    c-=1;
+fade("rgb(85,0,170)","40%");
+
+logoButton.addEventListener("onclick",);
 
 
-
-    colour = "("+ a +"," + b + "," + c + ")";
-    text="rgb"+colour;
-    logoButton.style.color = text;
-    // console.log(text);
+function makeLines() {
 
 
+}
+
+function fade(COLOUR, OPACITY) {
+
+    logoButton.style.color = COLOUR;
+    logoButton.style.opacity = OPACITY;
 }
 
