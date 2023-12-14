@@ -1,0 +1,1 @@
+    // logoButton.style.color = text;
