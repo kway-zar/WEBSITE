@@ -2,7 +2,7 @@
 
 const logoButton = document.querySelector('.logoButton');
 
-fade("rgb(85,0,170)","40%");
+fade("#092635","60%");
 
 const SHAPE_TO_MOVE = document.querySelector('.body .circleSpin');
 const rect = logoButton.getBoundingClientRect();
@@ -33,11 +33,17 @@ logoButton.addEventListener("mouseleave",function() {
 });
 
 
-
-logoButton.addEventListener("onclick",function(){
-
-});
+// const navigation = document.querySelector(".container");
+// const button = document.querySelector(".buttons");
+// button.addEventListener("onclick",function(){
     
+//     const navigationHeight = navigation.offsetHeight;
+//     document.documentElement.style.setProperty(
+//         "--scroll-padding",
+//          navigationHeight + "px"
+//     )
+// });
+
 
 
 function fade(COLOUR, OPACITY) {
@@ -45,4 +51,8 @@ function fade(COLOUR, OPACITY) {
     logoButton.style.color = COLOUR;
     logoButton.style.opacity = OPACITY;
 }
+function BlendIn() {
+    container = document.querySelector('.container');
+    container.style.animation = "3s ease-in 0s forwards altFade";
 
+}
