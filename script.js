@@ -33,6 +33,10 @@ logoButton.addEventListener("mouseleave",function() {
 });
 
 
+
+logoButton.addEventListener("onclick",function(){
+
+});
     
 
 
