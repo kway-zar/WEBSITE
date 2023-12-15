@@ -61,20 +61,20 @@
     }
  
 }
-@media only screen and (max-width:600px) {
-
+@media screen and (max-width: 300px) {
     html{
-        min-width: 200px;
+
+        scale: 108%;
     }
+
+    
 }
 
 
+
 html{
-    
-    width: clamp(100%,100%,150%);
-    height: clamp(100%,100%,150%);
-    /* min-width: 100%;
-    min-height: 100%; */
+    min-width: 100%;
+    min-height: 100%;
     scroll-behavior: smooth;
 
 }
