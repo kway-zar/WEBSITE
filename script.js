@@ -3,24 +3,37 @@
 const logoButton = document.querySelector('.logoButton');
 
 fade("rgb(85,0,170)","40%");
-var word;
+
+const SHAPE_TO_MOVE = document.querySelector('.body .circleSpin');
+const rect = logoButton.getBoundingClientRect();
+const x = rect.left;
+const y = rect.top;
+
+z = "translate(" + x + "px" +","+ y +"px)";
+
+SHAPE_TO_MOVE.style.left = x;
+SHAPE_TO_MOVE.style.top = y;
+
 
 logoButton.addEventListener("mouseover",function(){
-    // const rect = logoButton.getBoundingClientRect();
-    // const x = rect.left + window.scrollX;
-    // const y = rect.top + window.scrollY;
 
-    lines = document.querySelector(".body .lines");
-    X_px = x + "px";
-    Y_px = y + "px";
-    word = "translate(" + X_px + "," + Y_px + ")";
+    
+    
+    SHAPE_TO_MOVE.style.animation = "4s ease-in-out 0s infinite fade, 5s linear infinite lineAnimate";
 
-    lines.style.transform = word;
-    lines.style.transform = "rotate(10deg)";
-
+    logoButton.style.animation = "2s ease-in 0s infinite reverse forwards pulse";
+    
+    
 });
 
-console.log(word);
+logoButton.addEventListener("mouseleave",function() {
+
+    SHAPE_TO_MOVE.style.removeProperty("animation");
+    logoButton.style.removeProperty("animation");
+});
+
+
+    
 
 
 function fade(COLOUR, OPACITY) {
